@@ -7,14 +7,14 @@ import {
   NavBtn,
   Bars,
 } from "./NavbarElements";
-import { Link } from "react-router-dom";
+
 
 
 const Navbar = () => {
   return (
    
       <Nav>
-        <NavLogo to="/">Logo</NavLogo>
+        <NavLogo to="/home">Logo</NavLogo>
         <Bars />
         <NavMenu>
           <NavBtn>
@@ -23,8 +23,15 @@ const Navbar = () => {
           <NavBtn>
             <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>
           </NavBtn>
+          <NavBtn>
+            <NavBtnLink to="/timer">Timer</NavBtnLink>
+          </NavBtn>
+          <NavBtn>
+            <NavBtnLink to="/number">Num To Word</NavBtnLink>
+          </NavBtn>
         </NavMenu>
       </Nav>
+
   
   );
 };
