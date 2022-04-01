@@ -1,5 +1,7 @@
 import React from 'react'
 
+const SignIn = React.lazy(()=>import('./SignIn'))
+
 const SignUp = () => {
     console.log('Sign Up')
     return (
@@ -13,6 +15,11 @@ const SignUp = () => {
             <h1>Sign Up</h1>
             <h1>Sign Up</h1>
             <h1>Sign Up</h1>
+            <>
+            <React.Suspense fallback={<div>Please wait...</div>}>
+                <SignIn/>
+            </React.Suspense>
+            </>
         </div>
     )
 }
