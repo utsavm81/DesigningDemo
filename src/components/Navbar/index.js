@@ -29,6 +29,9 @@ const Navbar = () => {
           <NavBtn>
             <NavBtnLink to="/number">Num To Word</NavBtnLink>
           </NavBtn>
+          <NavBtn>
+            <NavBtnLink to="/demo">Context</NavBtnLink>
+          </NavBtn>
         </NavMenu>
       </Nav>
 

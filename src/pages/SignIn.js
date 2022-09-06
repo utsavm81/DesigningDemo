@@ -1,21 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import useToggle from "../components/CustomHooks/toggle";
+import { ThemeContext } from "../context";
 
 const SignIn = () => {
-const [toggle, setToggle] = useToggle(false);
-  console.log("Sign In");
+  const {data} = useContext(ThemeContext);
+  const [toggle, setToggle] = useToggle(false);
+
+  const {value, ...styleData} = data
+
   return (
     <div>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
-      <h1>Sign In</h1>
+      <h1 style={styleData} >Sign In</h1>
       <div>
         <button onClick={() => setToggle(!toggle)}>Toggle</button>
       </div>

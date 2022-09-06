@@ -9,6 +9,8 @@ import RoutesValue from "./Routes";
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import Number from "./pages/Number";
 import { lazy, Suspense } from "react";
+import DemoContext from "./pages/DemoContext";
+import { ThemeProvider } from "./context/provider";
 
 const SignIn = lazy(()=>import('./pages/SignIn'))
 const SignUp = lazy(()=>import('./pages/SignUp'))
@@ -20,7 +22,8 @@ const Datatables = lazy(()=>import('./components/Datatables'))
 
 function App() {
   return (
-    <BrowserRouter>
+    <ThemeProvider>
+       <BrowserRouter>
       <Navbar />
       <Routes>   
         <Route path="/sign-in" element={<Suspense fallback={<>Please wait...</>}><SignIn /></Suspense>} />
@@ -30,13 +33,12 @@ function App() {
         <Route path="/timer/routes/:name" element={<RoutesValue/>}/> 
         <Route path="/datatables" element={<Suspense fallback={<div>Please wait...</div>}><Datatables/></Suspense>}/>
         <Route path="/number" element={<Number/>}/>
+        <Route path="/demo" element={<DemoContext/>}/>
 
         {/* <Route path="/timer/:name/data" element={<Data/>} /> */}
       </Routes>
     </BrowserRouter>
-    // <>
-    // <h1>Hello</h1>
-    // </>
+    </ThemeProvider>
   );
 }
 
