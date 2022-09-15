@@ -3,7 +3,6 @@ import React from 'react'
 const SignIn = React.lazy(()=>import('./SignIn'))
 
 const SignUp = () => {
-    console.log('Sign Up')
     return (
         <div>
             <h1>Sign Up</h1>

@@ -23,17 +23,14 @@ const Planets = () => {
   ];
 
   useEffect(() => {
-    debugger;
     fetch(`https://swapi.dev/api/${params.name}`)
       .then((res) => {
-        debugger;
         return res.json();
       })
       .then((json) => {
-        debugger;
         setStarValue(json.results);
       });
-  },[]);
+  });
 
   const pageOptions = {
     sizePerPage: itemsPerPage,
@@ -44,11 +41,9 @@ const Planets = () => {
 useEffect (() =>{
     fetch(`https://swapi.dev/api/${params.name}/?page=${nextPage}`)
     .then((res) => {
-      debugger;
       return res.json();
     })
     .then((json) => {
-      debugger;
       setStarValue(json.results)
       setNextPage(json.next);
     });

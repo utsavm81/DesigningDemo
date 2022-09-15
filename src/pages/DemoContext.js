@@ -11,9 +11,11 @@ function DemoContext() {
     }
 
   return (
-    <select onChange={handleChange} value={data.value}>
+    <>
+      <select onChange={handleChange} value={data.value}>
         {Object.keys(themes).map((item)=><option key={item} name={item} >{item}</option>)}  
-    </select>
+      </select>
+    </>
   )
 }
 

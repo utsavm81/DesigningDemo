@@ -7,19 +7,15 @@ const Data = () => {
   const [starValue, setStarValue] = useState([]);
 
   useEffect(() => {
-    debugger;
     fetch(`https://swapi.dev/api/${params.name}`)
       .then((res) => {
-        debugger;
         return res.json();
       })
       .then((json) => {
-        debugger;
         setStarValue(json.results);
       });
   },[]);
 
-  console.log("start valuye",starValue);
   return (
     <>
     {/* <h1>{starValue}</h1> */}

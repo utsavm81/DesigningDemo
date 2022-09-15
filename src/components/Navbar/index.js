@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context";
 import {
   Nav,
   NavLogo,
@@ -11,26 +12,28 @@ import {
 
 
 const Navbar = () => {
+  const {data} =useContext(ThemeContext)
+  const {value,...styleData} = data
   return (
    
-      <Nav>
+      <Nav style={{background:styleData.background}}>
         <NavLogo to="/home">Logo</NavLogo>
         <Bars />
         <NavMenu>
           <NavBtn>
-            <NavBtnLink to="/sign-in">Sign In</NavBtnLink>
+            <NavBtnLink to="/sign-in" style={{color:styleData.color}}>Sign In</NavBtnLink>
           </NavBtn>
           <NavBtn>
-            <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>
+            <NavBtnLink to="/sign-up" style={{color:styleData.color}}>Sign Up</NavBtnLink>
           </NavBtn>
           <NavBtn>
-            <NavBtnLink to="/timer">Timer</NavBtnLink>
+            <NavBtnLink to="/timer" style={{color:styleData.color}}>Timer</NavBtnLink>
           </NavBtn>
           <NavBtn>
-            <NavBtnLink to="/number">Num To Word</NavBtnLink>
+            <NavBtnLink to="/number" style={{color:styleData.color}}>Num To Word</NavBtnLink>
           </NavBtn>
           <NavBtn>
-            <NavBtnLink to="/demo">Context</NavBtnLink>
+            <NavBtnLink to="/demo" style={{color:styleData.color}}>Context</NavBtnLink>
           </NavBtn>
         </NavMenu>
       </Nav>

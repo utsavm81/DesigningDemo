@@ -1,6 +1,5 @@
 import React from "react";
 import paginationFactory, {
-  PaginationListStandalone,
   PaginationProvider,
 } from "react-bootstrap-table2-paginator";
 import BootstrapTable from "react-bootstrap-table-next";

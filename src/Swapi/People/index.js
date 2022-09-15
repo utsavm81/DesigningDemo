@@ -23,14 +23,11 @@ const People = () => {
  
 
   useEffect(() => {
-    debugger;
     fetch(`https://swapi.dev/api/${params.name}`)
       .then((res) => {
-        debugger;
         return res.json();
       })
       .then((json) => {
-        debugger;
         setStarValue(json.results);
         setNextPage(json.next);
         setPrevPage(json.previous);
@@ -45,11 +42,9 @@ const People = () => {
     if (nextPage !== null) {
       fetch(nextPage)
         .then((res) => {
-          debugger;
           return res.json();
         })
         .then((json) => {
-          debugger;
           let numberPage = nextPage
           let stringLength= numberPage&&numberPage.length;
           let valueLength = numberPage.charAt(stringLength-1)
@@ -63,14 +58,11 @@ const People = () => {
 
   const prevPageClick = () => {
     if (prevPage !== null) {
-      debugger
       fetch(prevPage)
         .then((res) => {
-          debugger;
           return res.json();
         })
         .then((json) => {
-          debugger;
           let numberPage = prevPage
           let stringLength= numberPage&&numberPage.length;
           let valueLength = numberPage.charAt(stringLength-1)
