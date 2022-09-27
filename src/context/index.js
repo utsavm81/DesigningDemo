@@ -1,7 +1,7 @@
 import { createContext } from "react";
-import { themes } from "../constant";
+import { dateProvider } from "../constant";
 
 
-export const ThemeContext = createContext(themes);
+export const ThemeContext = createContext(dateProvider);
 
 

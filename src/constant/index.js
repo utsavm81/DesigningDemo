@@ -1,19 +1,28 @@
-
-export const themes = {
-    light: {
-      color: "#000000",
-      background: "#eeeeee"
+export const dateProvider = {
+    morning: {
+      color:"#4C6793",
+      background:"#8BBCCC"
     },
-    dark: {
-      color: "#ffffff",
-      background: "#222222"
+    afternoon: {
+      color: "#F7B633",
+      background: "#D34C26"
     },
-    green: {
-      color: "#D2D79F",
-      background: "#42855B"
+    evening:{
+      color: "#F6EEC7",
+      background: "#D15A7C"
     },
-    brown:{
-      color:"#967E76",
-      background:"#D7C0AE"
+    night: {
+      color:"#9BA4B4",
+      background:"#14274E"
     }
-  };
+}
+
+export const dateTimeProvider = {
+  earlyMorning :'6.00',
+  earlyAfternoon :'12.00',
+  earlyEvening : '17.00',
+  earlyNight : '21.00',
+}
+
+
+
