@@ -16,7 +16,7 @@ const SignUp = lazy(()=>import('./pages/SignUp'))
 const Timer = lazy(()=>import('./pages/Timer'))
 const DemoContext = lazy(()=>import('./pages/DemoContext'))
 const Datatables = lazy(()=>import('./components/Datatables'))
-
+const Home = lazy(()=>import('./pages/Home'))
 
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
       <Navbar />
       <Routes>   
         <Route path="/demo" element={<Suspense fallback={<>Please wait...</>}><DemoContext/></Suspense>}/>
+        <Route path="/home" element={<Suspense fallback={<>Please wait...</>}><Home/></Suspense>}/>
         <Route path="/sign-in" element={<Suspense fallback={<>Please wait...</>}><SignIn /></Suspense>} />
         <Route path="/sign-up" element={<Suspense fallback={<>Please wait...</>}><SignUp /></Suspense>} />
         <Route path="/timer" element={<Suspense fallback={<>Please wait...</>}><Timer/></Suspense>} />
